@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collapsible Sidebar</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
-        <div class="logo">AppLogo</div>
-        <ul class="nav-list">
-            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#"><i class="fas fa-gear"></i> Services</a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+    <div class="form-box">
+        <h2>Reach Out</h2>
+        <form id="contact-form">
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="name-error">Name is required</div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="email-error">Valid email is required</div>
+            </div>
+            <div class="input-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+                <div class="error-message" id="subject-error">Subject is required</div>
+            </div>
+            <div class="input-group">
+                <label for="message">Your Message (max 500 characters)</label>
+                <textarea id="message" name="message" required></textarea>
+                <div class="char-count" id="char-count">0/500</div>
+                <div class="error-message" id="message-error">Message is required</div>
+            </div>
+            <button type="submit" class="send-button" id="send-button">Send</button>
+        </form>
     </div>
-    <div class="content">
-        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
-        <h1>Welcome to My Sidebar</h1>
-        <p>Click the menu icon to toggle the sidebar!</p>
-    </div>
+    <div class="notification" id="notification"></div>
     <script src="script.js"></script>
 </body>
 </html>
