@@ -3,38 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>TaskFlow</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-box">
-        <h2>Reach Out</h2>
-        <form id="contact-form">
-            <div class="input-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-                <div class="error-message" id="name-error">Name is required</div>
+    <div class="main-wrap">
+        <header class="top-banner">
+            <h1>Welcome to TaskFlow</h1>
+            <p>Hey there! Today is Thursday, July 17, 2025. Let’s get your tasks sorted!</p>
+            <button class="join-button">Join the Fun</button>
+        </header>
+
+        <section class="feature-spot">
+            <h2>What Makes TaskFlow Awesome</h2>
+            <div class="feature-group">
+                <div class="feature-card">
+                    <span class="icon">📅</span>
+                    <p>Plan your day with a cozy schedule</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">✅</span>
+                    <p>Check off tasks with a smile</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">⏰</span>
+                    <p>Get gentle reminders</p>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <div class="error-message" id="email-error">Valid email is required</div>
+        </section>
+
+        <section class="story-spot">
+            <h2>What Our Friends Say</h2>
+            <div class="story-group">
+                <p>"TaskFlow makes my day so much brighter!" - Jane</p>
+                <p>"Love how simple it is—reminders are a lifesaver!" - Mike</p>
             </div>
-            <div class="input-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
-                <div class="error-message" id="subject-error">Subject is required</div>
+        </section>
+
+        <section class="price-spot">
+            <h2>Choose Your Plan</h2>
+            <div class="price-group">
+                <div class="price-card">Free</div>
+                <div class="price-card">Pro - $5/month</div>
+                <div class="price-card">Team - $10/month</div>
             </div>
-            <div class="input-group">
-                <label for="message">Your Message (max 500 characters)</label>
-                <textarea id="message" name="message" required></textarea>
-                <div class="char-count" id="char-count">0/500</div>
-                <div class="error-message" id="message-error">Message is required</div>
-            </div>
-            <button type="submit" class="send-button" id="send-button">Send</button>
-        </form>
+        </section>
+
+        <footer class="bottom-bar">
+            <p>© 2025 TaskFlow. We’re here for you!</p>
+        </footer>
     </div>
-    <div class="notification" id="notification"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
